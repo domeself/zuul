@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: gateway-zuul
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    sender:
+      type: kafka
+  kafka:
+    bootstrap-servers: http://192.168.1.153:9092
+server:
+  port: 8500
+
+zuul:
+  routes:
+    # 面向服务的路由
+    service-message:
+      path: /message/**
+      serviceId: SERVICE-MESSAGE
+    service-member:
+      path: /member/**
+      serviceId: SERVICE-MEMBER
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
