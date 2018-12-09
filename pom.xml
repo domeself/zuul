@@ -10,6 +10,7 @@
 
     <name>zuul</name>
     <description>Demo project for Spring Boot</description>
+
     <repositories>
         <repository>
             <id>spring-milestones</id>
@@ -19,12 +20,13 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <repository>
+        <!--<repository>
             <id>public</id>
             <name>Public Repositories</name>
             <url>http://192.168.1.153:9080/nexus/content/groups/public/</url>
-        </repository>
+        </repository>-->
     </repositories>
+    <!--
     <distributionManagement>
         <snapshotRepository>
             <id>snapshots</id>
@@ -36,7 +38,7 @@
             <name>Releases</name>
             <url>http://192.168.1.153:9080/nexus/content/repositories/releases/</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement>-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
